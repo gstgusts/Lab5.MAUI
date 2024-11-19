@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab5.MAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                x:Name="LblName"
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Label
+                x:Name="LblProgress"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <StackLayout Orientation="Vertical">
+                <CarouselView x:Name="C1" IndicatorView="IndicatorView1">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="asfdasfdasdfasdf" />
+                                <Label Text="{Binding Id}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="IndicatorView1"
+                               IndicatorColor="LightGray"
+                               SelectedIndicatorColor="DarkGray"
+                               HorizontalOptions="Center" />
+            </StackLayout>
+
+
+            <!--<Entry Placeholder="Enter ID" x:Name="Entry1" TextChanged="Entry1_OnTextChanged" />-->
+            <!--<Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Welcome to &#10;.NET Multi-platform App UI"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />-->
+
+            <!--<Button
+<CarouselView><CarouselView.ItemTemplate><DataTemplate></DataTemplate></CarouselView.ItemTemplate></CarouselView>
+<CarouselView><CarouselView.ItemTemplate><DataTemplate></DataTemplate></CarouselView.ItemTemplate></CarouselView>
+<CarouselView><CarouselView.ItemTemplate><DataTemplate></DataTemplate></CarouselView.ItemTemplate></CarouselView>
+                x:Name="CounterBtn"
+                Text="Get student data" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />-->
+            <!--<Entry Placeholder="Please enter text" x:Name="Entry1" />
+            <Editor x:Name="Editor1" />
+            <DatePicker x:Name="DatePicker1"/>
+            <Switch IsToggled="false" />-->
+            <!--<WebView x:Name="WebView1" WidthRequest="800" HeightRequest="600" Source="https://delfi.lv" />-->
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
